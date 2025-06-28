@@ -1,0 +1,47 @@
+PACE: Analyze - Understand the Data
+This section details the analysis phase of the Automatidata project, focusing on building the DataFrame, inspecting the data, and compiling summary information to inform next steps.
+
+Task 2a. Build dataframe
+Create a pandas DataFrame for data learning, and future exploratory data analysis (EDA) and statistical activities.
+
+Code:
+
+import pandas as pd
+import numpy as np
+
+# Load dataset into dataframe
+df2 = pd.read_csv('2017_Yellow_Taxi_Trip_Data.csv')
+print("done")
+
+Task 2b. Understand the data - Inspect the data
+View and inspect summary information about the DataFrame.
+
+Code:
+
+df2.head(10)
+df2.info()
+df2.describe()
+
+Key Findings from Data Inspection:
+
+df.info() Output Observations:
+
+Data Types: Several columns, specifically tpep_pickup_datetime and tpep_dropoff_datetime, are of object (string) dtype, indicating they are not in a numeric or datetime format suitable for direct time-series analysis and will require conversion.
+
+Null Values: All columns show 22699 non-null counts, matching the RangeIndex, which means there are no missing values in the dataset.
+
+Column Naming: The first column (originally unnamed from the CSV) was identified and renamed to 'id' for better clarity and usability.
+
+Other Observations: There's a mix of int64 (7 columns) and float64 (8 columns) dtypes, alongside the object dtypes.
+
+df.describe() Output Observations:
+
+fare_amount: The distribution of fare_amount is noteworthy. The maximum value is significantly high ($999.99), which is much larger than the 25th percentile ($6.50) and 75th percentile ($14.50) range. This suggests the presence of outliers or potentially erroneous entries. Critically, there are negative values for fare_amount (minimum of -120.00), which are illogical for a fare and indicate data quality issues.
+
+trip_distance: Most rides fall within the 1 to 3 miles range (from 25th to 75th percentiles). However, the maximum trip_distance is over 33 miles, which is a substantial outlier compared to the typical trip lengths.
+
+total_amount: Similar to fare_amount, total_amount also exhibits questionable negative values (minimum of -120.30) and a very high maximum (1200.29), indicating potential data anomalies.
+
+passenger_count: The minimum passenger_count is 0, which is unusual for a taxi trip and indicates data quality issues. The maximum is 6, which is plausible.
+
+These initial observations highlight the need for data cleaning and validation before proceeding with in-depth analysis.
