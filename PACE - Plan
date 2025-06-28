@@ -1,0 +1,21 @@
+PACE: Plan - Understand the Situation
+This section outlines the initial planning phase for the Automatidata project, focusing on understanding the context and preparing for data analysis.
+
+Task 1. Understand the situation
+How can you best prepare to understand and organize the provided taxi cab information?
+
+To effectively understand and organize the provided taxi cab information, the following steps are crucial:
+
+Review the Project Proposal: Revisit the approved project proposal to ensure a clear understanding of the client's (New York City TLC) objectives, the scope of the project, and the expected outcomes. This will help in prioritizing data aspects relevant to the business goals.
+
+Familiarize with Data Source: Understand the origin and nature of the 2017_Yellow_Taxi_Trip_Data.csv dataset. While it's pre-loaded, knowing if it's a complete dump or a sample, and any known limitations, is important.
+
+Initial Data Overview: Prepare to perform a cursory inspection of the dataset. This includes checking the file size, number of rows/columns, and getting a general sense of the data volume.
+
+Identify Key Stakeholders: Recognize that findings will be communicated to team members and potentially the client (NYC TLC). Planning for clear and concise communication of initial insights is essential.
+
+Define Initial Questions: Based on the project's goal to "get clear insights," formulate preliminary questions that the data might answer. This helps guide the initial inspection.
+
+Outline Data Preparation Steps: Anticipate common data preparation needs for taxi trip data, such as handling datetime formats, addressing outliers (like negative fare amounts or extreme trip distances), and ensuring data consistency.
+
+Leverage PACE Framework: Understand that this initial phase aligns with the "Plan" stage of the PACE framework, setting the foundation for subsequent analysis.
